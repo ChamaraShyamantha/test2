@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24953315334",
+    "project_id": "medicshare-da927",
+    "storage_bucket": "medicshare-da927.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24953315334:android:1dc151ce3843895b706387",
+        "android_client_info": {
+          "package_name": "com.example.medic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24953315334-bhs6vsckknre7l9mq28j3vhv4le56att.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3MoxVRvKS2ZRcJ1NcqYSTRupLWY0tioY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24953315334-bhs6vsckknre7l9mq28j3vhv4le56att.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
