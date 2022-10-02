@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(children: [
             Center(
               child: Container(
-                child: Image.asset('lib/assets/images/logo.png'),
+                child: Image.asset('assets/images/logo.png'),
                 height: 130.0,
               ),
             ),
@@ -111,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: CustomButton(
                       text: 'Login',
                       onTap: () {
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       PopupMenuButton(
                           icon: Image.asset(
-                            'lib/assets/images/sign-up.png',
+                            'assets/images/sign-up.png',
                             scale: 0.1,
                           ),
                           itemBuilder: (context) => [

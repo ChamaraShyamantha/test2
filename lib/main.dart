@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:medic/assets/features/authentication/screens/vender_auth.dart';
-//import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
+// import 'package:medic/assets/features/authentication/screens/vender_auth.dart';
+// import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
 import 'package:medic/assets/features/authentication/screens/login.dart';
 import 'package:medic/assets/features/authentication/services/authentication_service.dart';
 import 'package:medic/assets/global_variables.dart';
@@ -15,9 +15,8 @@ void main() {
     ChangeNotifierProvider(
       create: (context) => UserProvider(),
     ),
-  ], child:const MyApp()));
+  ], child: const MyApp()));
 }
-
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -25,7 +24,6 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
-
 
 class _MyAppState extends State<MyApp> {
   final AuthenticationService authService = AuthenticationService();
@@ -36,11 +34,11 @@ class _MyAppState extends State<MyApp> {
     authService.getUserData(context);
   }
 
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Medishare',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
@@ -55,11 +53,13 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+      home: Provider.of<UserProvider>(context).user.token!.isNotEmpty
           ? Provider.of<UserProvider>(context).user.type == 'user'
               ? const BottomBar()
               : const AdminScreen()
           : const LoginScreen(),
+      // : const VenderAuthenticationScreen(),
+      // : const CustomerAuthenticationScreen(),
     );
   }
 }

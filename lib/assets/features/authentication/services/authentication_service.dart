@@ -30,7 +30,7 @@ class AuthenticationService {
         password: password,
         email: email,
         address: '',
-        contactNo: '',
+        contactNo: null,
         type: '',
         token: '',
         cart: [],
@@ -73,22 +73,27 @@ class AuthenticationService {
           'password': password,
         }),
         headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
+          'Content-type': 'application/json',
+          'Accept': 'application/json',
         },
       );
       httpErrorHandle(
         response: res,
         context: context,
         onSuccess: () async {
+          var decodedItem = jsonDecode(res.body);
+          print(decodedItem);
           SharedPreferences prefs = await SharedPreferences.getInstance();
+          var testUser = User.fromJson(res.body);
+          print(testUser.name.toString());
           Provider.of<UserProvider>(context, listen: false).setUser(res.body);
           await prefs.setString('x-auth-token', jsonDecode(res.body)['token']);
-          // Navigator.pushNamedAndRemoveUntil(
-          //   context,
-          //  // BottomBar.routeName,
-          //  HomeScreen.routeName,
-          //   (route) => false,
-          // );
+          /*Navigator.pushNamedAndRemoveUntil(
+            context,
+           // BottomBar.routeName,
+           HomeScreen.routeName,
+            (route) => false,
+          );*/
         },
       );
     } catch (e) {

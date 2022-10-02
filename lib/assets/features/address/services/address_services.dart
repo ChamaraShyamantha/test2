@@ -21,7 +21,7 @@ class AddressServices {
         Uri.parse('$uri/api/save-user-address'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'address': address,
@@ -56,7 +56,7 @@ class AddressServices {
       http.Response res = await http.post(Uri.parse('$uri/api/order'),
           headers: {
             'Content-Type': 'application/json; charset=UTF-8',
-            'x-auth-token': userProvider.user.token,
+            'x-auth-token': userProvider.user.token!,
           },
           body: jsonEncode({
             'cart': userProvider.user.cart,
@@ -92,7 +92,7 @@ class AddressServices {
         Uri.parse('$uri/admin/delete-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'id': product.id,

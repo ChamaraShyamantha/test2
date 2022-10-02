@@ -22,7 +22,7 @@ class ProductDetailsServices {
         Uri.parse('$uri/api/add-to-cart'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'id': product.id!,
@@ -55,7 +55,7 @@ class ProductDetailsServices {
         Uri.parse('$uri/api/rate-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'id': product.id!,

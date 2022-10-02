@@ -55,7 +55,7 @@ class _AddressScreenState extends State<AddressScreen> {
     if (Provider.of<UserProvider>(context, listen: false)
         .user
         .address
-        .isEmpty) {
+        !.isEmpty) {
       addressServices.saveUserAddress(
           context: context, address: addressToBeUsed);
     }
@@ -69,7 +69,7 @@ class _AddressScreenState extends State<AddressScreen> {
   void onGooglePayResult(res) {
     if (Provider.of<UserProvider>(context, listen: false)
         .user
-        .address
+        .address!
         .isEmpty) {
       addressServices.saveUserAddress(
           context: context, address: addressToBeUsed);
@@ -123,7 +123,7 @@ class _AddressScreenState extends State<AddressScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              if (address.isNotEmpty)
+              if (address!.isNotEmpty)
                 Column(
                   children: [
                     Container(

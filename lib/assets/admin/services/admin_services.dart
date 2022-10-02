@@ -48,7 +48,7 @@ class AdminServices {
         Uri.parse('$uri/admin/add-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: product.toJson(),
       );
@@ -74,7 +74,7 @@ class AdminServices {
       http.Response res =
           await http.get(Uri.parse('$uri/admin/get-products'), headers: {
         'Content-Type': 'application/json; charset=UTF-8',
-        'x-auth-token': userProvider.user.token,
+        'x-auth-token': userProvider.user.token!,
       });
 
       httpErrorHandle(
@@ -110,7 +110,7 @@ class AdminServices {
         Uri.parse('$uri/admin/delete-product'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'id': product.id,
@@ -136,7 +136,7 @@ class AdminServices {
       http.Response res =
           await http.get(Uri.parse('$uri/admin/get-orders'), headers: {
         'Content-Type': 'application/json; charset=UTF-8',
-        'x-auth-token': userProvider.user.token,
+        'x-auth-token': userProvider.user.token!,
       });
 
       httpErrorHandle(
@@ -173,7 +173,7 @@ class AdminServices {
         Uri.parse('$uri/admin/change-order-status'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
-          'x-auth-token': userProvider.user.token,
+          'x-auth-token': userProvider.user.token!,
         },
         body: jsonEncode({
           'id': order.id,
@@ -199,7 +199,7 @@ class AdminServices {
       http.Response res =
           await http.get(Uri.parse('$uri/admin/analytics'), headers: {
         'Content-Type': 'application/json; charset=UTF-8',
-        'x-auth-token': userProvider.user.token,
+        'x-auth-token': userProvider.user.token!,
       });
 
       httpErrorHandle(

@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 class User {
-  final String id;
-  final String name;
-  final String email;
-  final String password;
-  final String address;
-  final String contactNo;
-  final String type;
-  final String token;
-  final List<dynamic> cart;
+  final String? id;
+  final String? name;
+  final String? email;
+  final String? password;
+  final String? address;
+  final String? contactNo;
+  final String? type;
+  final String? token;
+  final List<dynamic>? cart;
 
   User({
     required this.id,

@@ -69,7 +69,7 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
             children: [
               Center(
                 child: Container(
-                  child: Image.asset('lib/assets/images/logo.png'),
+                  child: Image.asset('assets/images/logo.png'),
                   height: 100.0,
                 ),
               ),

@@ -34,7 +34,7 @@ class _CartScreenState extends State<CartScreen> {
     final user = context.watch<UserProvider>().user;
     int sum = 0;
     user.cart
-        .map((e) => sum += e['quantity'] * e['product']['price'] as int)
+        ?.map((e) => sum += e['quantity'] * e['product']['price'] as int)
         .toList();
 
     return Scaffold(
@@ -118,7 +118,7 @@ class _CartScreenState extends State<CartScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
-                text: 'Proceed to Buy (${user.cart.length} items)',
+                text: 'Proceed to Buy (${user.cart!.length} items)',
                 onTap: () => navigateToAddress(sum),
                 color: Colors.yellow[600],
               ),
@@ -130,7 +130,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
             const SizedBox(height: 5),
             ListView.builder(
-              itemCount: user.cart.length,
+              itemCount: user.cart!.length,
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return CartProduct(

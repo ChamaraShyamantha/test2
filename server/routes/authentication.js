@@ -50,7 +50,20 @@ RouterAuthentication.post("/api/signin", async (req, res) => {
       return res.status(400).json({ msg: "Incorrect password." });
     }else{
       const token = jwt.sign({ id: user._id }, "passwordKey");
-      return res.json({ token:user._doc });
+      return res.json({ 
+        
+        _id: user._doc['_id'],
+        name: user._doc['name'],
+        email: user._doc['email'],
+        password: user._doc['password'],
+        address: user._doc['address'],
+        
+        contactNo: user._doc['contactNo'].toString(),
+        type: user._doc['type'],
+        token: token,
+        cart:user._doc['cart'],
+  
+      });
       
     }
    
