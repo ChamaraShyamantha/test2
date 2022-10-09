@@ -63,7 +63,7 @@ class _CartProductState extends State<CartProduct> {
                     child: Text(
                       product.name,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 13,
                       ),
                       maxLines: 2,
                     ),
@@ -72,9 +72,9 @@ class _CartProductState extends State<CartProduct> {
                     width: 235,
                     padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Text(
-                      '\$${product.price}',
+                      '\Rs.${product.price}',
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
                       maxLines: 2,

@@ -1,7 +1,7 @@
 const express = require("express");
 const productRouter = express.Router();
 const auth = require("../middlewares/auth");
-const { Product } = require("../models/product");
+const { Product } = require("../modules/product");
 
 productRouter.get("/api/products/", auth, async (req, res) => {
   try {
@@ -75,5 +75,6 @@ productRouter.get("/api/deal-of-day", auth, async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+
 
 module.exports = productRouter;

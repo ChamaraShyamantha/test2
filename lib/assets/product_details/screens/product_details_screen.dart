@@ -9,6 +9,7 @@ import 'package:medic/assets/global_variables.dart';
 import 'package:medic/assets/features/search/screens/search_screen.dart';
 import 'package:medic/assets/models/product.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:medic/assets/search/image_search.dart';
 import 'package:provider/provider.dart';
 
 class ProductDetailScreen extends StatefulWidget {
@@ -57,6 +58,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     );
   }
 
+  void navigateToImageSearch() {
+    Navigator.pushNamed(context, ImageSearch.routeName);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,62 +76,23 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(
-                child: Container(
-                  height: 42,
-                  margin: const EdgeInsets.only(left: 15),
-                  child: Material(
-                    borderRadius: BorderRadius.circular(7),
-                    elevation: 1,
-                    child: TextFormField(
-                      onFieldSubmitted: navigateToSearchScreen,
-                      decoration: InputDecoration(
-                        prefixIcon: InkWell(
-                          onTap: () {},
-                          child: const Padding(
-                            padding: EdgeInsets.only(
-                              left: 6,
-                            ),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 23,
-                            ),
-                          ),
-                        ),
-                        filled: true,
-                        fillColor: Colors.white,
-                        contentPadding: const EdgeInsets.only(top: 10),
-                        border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide.none,
-                        ),
-                        enabledBorder: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide(
-                            color: Colors.black38,
-                            width: 1,
-                          ),
-                        ),
-                        hintText: 'Search Amazon.in',
-                        hintStyle: const TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 17,
-                        ),
-                      ),
-                    ),
-                  ),
+              Center(
+                child: SizedBox(
+                  child: Image.asset('assets/images/white_logo.png'),
+                  width: 170.00,
                 ),
               ),
-              Container(
-                color: Colors.transparent,
-                height: 42,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: const Icon(Icons.mic, color: Colors.black, size: 25),
+              InkWell(
+                onTap: () {
+                  navigateToImageSearch();
+                },
+                child: Container(
+                  color: Colors.transparent,
+                  height: 42,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  child: const Icon(Icons.image_search_outlined,
+                      color: Colors.white, size: 25),
+                ),
               ),
             ],
           ),
@@ -140,25 +106,17 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    widget.product.id!,
-                  ),
-                  Stars(
-                    rating: avgRating,
-                  ),
-                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 20,
-                horizontal: 10,
-              ),
-              child: Text(
-                widget.product.name,
-                style: const TextStyle(
-                  fontSize: 15,
+              padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+              child: Center(
+                child: Text(
+                  widget.product.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -189,16 +147,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 text: TextSpan(
                   text: 'Deal Price: ',
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 15,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                   children: [
                     TextSpan(
-                      text: '\$${widget.product.price}',
+                      text: '\Rs.${widget.product.price}',
                       style: const TextStyle(
-                        fontSize: 22,
-                        color: Colors.red,
+                        fontSize: 15,
+                        color: Colors.teal,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -212,10 +170,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             ),
             Container(
               color: Colors.black12,
-              height: 5,
+              height: 2,
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.fromLTRB(10, 5, 10,2.5),
               child: CustomButton(
                 text: 'Buy Now',
                 onTap: () {},
@@ -223,47 +181,18 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             ),
             const SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 5),
               child: CustomButton(
                 text: 'Add to Cart',
                 onTap: addToCart,
-                color: const Color.fromRGBO(254, 216, 19, 1),
+                color: Colors.teal,
               ),
             ),
             const SizedBox(height: 10),
             Container(
-              color: Colors.black12,
+              color: Colors.white,
               height: 5,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              child: Text(
-                'Rate The Product',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            RatingBar.builder(
-              initialRating: myRating,
-              minRating: 1,
-              direction: Axis.horizontal,
-              allowHalfRating: true,
-              itemCount: 5,
-              itemPadding: const EdgeInsets.symmetric(horizontal: 4),
-              itemBuilder: (context, _) => const Icon(
-                Icons.star,
-                color: GlobalVariables.secondaryColor,
-              ),
-              onRatingUpdate: (rating) {
-                productDetailsServices.rateProduct(
-                  context: context,
-                  product: widget.product,
-                  rating: rating,
-                );
-              },
-            )
           ],
         ),
       ),

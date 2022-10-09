@@ -52,7 +52,7 @@ class AdminServices {
         },
         body: product.toJson(),
       );
-
+  print(res.body.toString());
       httpErrorHandle(
         response: res,
         context: context,
@@ -209,11 +209,11 @@ class AdminServices {
           var response = jsonDecode(res.body);
           totalEarning = response['totalEarnings'];
           sales = [
-            Sales('Mobiles', response['mobileEarnings']),
-            Sales('Essentials', response['essentialEarnings']),
-            Sales('Books', response['booksEarnings']),
-            Sales('Appliances', response['applianceEarnings']),
-            Sales('Fashion', response['fashionEarnings']),
+            Sales('Liquids', response['liquidsEarnings']),
+            Sales('Capsules', response['capsulesEarnings']),
+            Sales('Inhalers', response['inhalersEarnings']),
+            Sales('Injections', response['injectionsEarnings']),
+            Sales('Patches', response['patchesEarnings']),
           ];
         },
       );

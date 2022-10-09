@@ -66,7 +66,7 @@ class _CategoryDealsScreenState extends State<CategoryDealsScreen> {
                   child: Text(
                     'Keep shopping for ${widget.category}',
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 14,
                     ),
                   ),
                 ),

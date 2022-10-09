@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
 import 'package:medic/assets/global_variables.dart';
 import 'package:medic/assets/features/authentication/services/authentication_service.dart';
 import '../../../common/widgets/customButton.dart';
 
 class LoginScreen extends StatefulWidget {
-  static const String routeName = '/authentication-screen';
+  static const String routeName = '/login-screen';
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -21,6 +22,10 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  void goToSignUp(){
+    Navigator.pushReplacementNamed(context, CustomerAuthenticationScreen.routeName);
+  }
 
   @override
   void dispose() {
@@ -130,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         'Forgot Password ?',
                         style: TextStyle(
                             color: Colors.teal,
-                            fontSize: 15.0,
+                            fontSize: 14.0,
                             fontFamily: 'Source Sans Pro',
                             fontWeight: FontWeight.w800),
                       ),
@@ -138,15 +143,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Row(
                     children: <Widget>[
-                      const Text(
-                        'Do not have an account?',
-                        style: TextStyle(
-                            color: Colors.teal,
-                            fontSize: 14.0,
-                            fontFamily: 'Source Sans Pro',
-                            fontWeight: FontWeight.w500),
+                      InkWell(
+                        onTap: () {
+                          goToSignUp();
+                        },
+                        child: const Text(
+                          'Do not have an account?',
+                          style: TextStyle(
+                              color: Colors.teal,
+                              fontSize: 14.0,
+                              fontFamily: 'Source Sans Pro',
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
-                      PopupMenuButton(
+                      /*PopupMenuButton(
                           icon: Image.asset(
                             'assets/images/sign-up.png',
                             scale: 0.1,
@@ -158,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 PopupMenuItem(
                                   child: Text('Vender'),
                                 )
-                              ]),
+                              ]),*/
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),

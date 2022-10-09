@@ -7,6 +7,8 @@ import 'package:medic/assets/features/home/widgets/deal_of_day.dart';
 import 'package:medic/assets/features/home/widgets/top_categories.dart';
 import 'package:medic/assets/features/search/screens/search_screen.dart';
 
+import '../../../search/image_search.dart';
+
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,6 +20,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   void navigateToSearchScreen(String query) {
     Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
+  }
+
+  void navigateToImageSearch() {
+    Navigator.pushNamed(context, ImageSearch.routeName);
   }
 
   @override
@@ -34,62 +40,24 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(
+              Center(
                 child: Container(
-                  height: 42,
-                  margin: const EdgeInsets.only(left: 15),
-                  child: Material(
-                    borderRadius: BorderRadius.circular(7),
-                    elevation: 1,
-                    child: TextFormField(
-                      onFieldSubmitted: navigateToSearchScreen,
-                      decoration: InputDecoration(
-                        prefixIcon: InkWell(
-                          onTap: () {},
-                          child: const Padding(
-                            padding: EdgeInsets.only(
-                              left: 6,
-                            ),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 23,
-                            ),
-                          ),
-                        ),
-                        filled: true,
-                        fillColor: Colors.white,
-                        contentPadding: const EdgeInsets.only(top: 10),
-                        border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide.none,
-                        ),
-                        enabledBorder: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide(
-                            color: Colors.black38,
-                            width: 1,
-                          ),
-                        ),
-                        hintText: 'Search in MEDICSHARE',
-                        hintStyle: const TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 17,
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: Image.asset('assets/images/white_logo.png'),
+                  // height: 50.0,
+                  width: 170.00,
                 ),
               ),
-              Container(
-                color: Colors.transparent,
-                height: 42,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: const Icon(Icons.mic, color: Colors.black, size: 25),
+              InkWell(
+                onTap: () {
+                  navigateToImageSearch();
+                },
+                child: Container(
+                  color: Colors.transparent,
+                  height: 42,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  child: const Icon(Icons.image_search_outlined,
+                      color: Colors.white, size: 25),
+                ),
               ),
             ],
           ),
@@ -100,14 +68,11 @@ class _HomeScreenState extends State<HomeScreen> {
           children: const [
             AddressBox(),
             SizedBox(height: 10),
-            TopCategories(),
+            Center(child: TopCategories()),
             SizedBox(height: 10),
-            CarouselImage(),
-            DealOfDay(),
           ],
         ),
       ),
     );
   }
-
 }

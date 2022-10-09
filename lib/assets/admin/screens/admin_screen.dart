@@ -18,7 +18,7 @@ class _AdminScreenState extends State<AdminScreen> {
 
   List<Widget> pages = [
     const PostsScreen(),
-    //const AnalyticsScreen(),
+    const AnalyticsScreen(),
     const OrdersScreen(),
   ];
 
@@ -45,7 +45,7 @@ class _AdminScreenState extends State<AdminScreen> {
               Container(
                 alignment: Alignment.topLeft,
                 child: Image.asset(
-                  'assets/images/amazon_in.png',
+                  'assets/images/logo.png',
                   width: 120,
                   height: 45,
                   color: Colors.black,

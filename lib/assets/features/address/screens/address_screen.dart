@@ -138,7 +138,7 @@ class _AddressScreenState extends State<AddressScreen> {
                         child: Text(
                           address,
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
                       ),
@@ -147,7 +147,7 @@ class _AddressScreenState extends State<AddressScreen> {
                     const Text(
                       'OR',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 13,
                       ),
                     ),
                     const SizedBox(height: 20),

@@ -24,7 +24,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   final TextEditingController quantityController = TextEditingController();
   final AdminServices adminServices = AdminServices();
 
-  String category = 'Mobiles';
+  String category = 'Liquids';
   List<File> images = [];
   final _addProductFormKey = GlobalKey<FormState>();
 
@@ -38,11 +38,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
   }
 
   List<String> productCategories = [
-    'Mobiles',
-    'Essentials',
-    'Appliances',
-    'Books',
-    'Fashion'
+    'Liquids',
+    'Capsules',
+    'Inhalers',
+    'Injections',
+    'Patches'
   ];
 
   void sellProduct() {
@@ -56,6 +56,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
         category: category,
         images: images,
       );
+    }else{
+      print("validation or other error");
     }
   }
 
@@ -135,7 +137,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                                 Text(
                                   'Select Product Images',
                                   style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 13,
                                     color: Colors.grey.shade400,
                                   ),
                                 ),
@@ -157,6 +159,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 ),
                 const SizedBox(height: 10),
                 CustomTextField(
+                  
                   controller: priceController,
                   hintText: 'Price',
                 ),

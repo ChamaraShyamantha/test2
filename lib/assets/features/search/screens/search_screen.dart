@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:medic/assets/common/widgets/loader.dart';
 import 'package:medic/assets/global_variables.dart';
 import 'package:medic/assets/features/home/widgets/address_box.dart';
@@ -6,14 +8,15 @@ import 'package:medic/assets/features/search/services/search_services.dart';
 import 'package:medic/assets/features/search/widget/searched_product.dart';
 import 'package:medic/assets/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:medic/assets/search/image_search.dart';
 
 class SearchScreen extends StatefulWidget {
   static const String routeName = '/search-screen';
   final String searchQuery;
-  const SearchScreen({
-    Key? key,
-    required this.searchQuery,
-  }) : super(key: key);
+  final bool imageSearch;
+  const SearchScreen(
+      {Key? key, required this.searchQuery, required this.imageSearch})
+      : super(key: key);
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -27,12 +30,17 @@ class _SearchScreenState extends State<SearchScreen> {
   void initState() {
     super.initState();
     fetchSearchedProduct();
+    log(widget.imageSearch.toString());
   }
 
   fetchSearchedProduct() async {
     products = await searchServices.fetchSearchedProduct(
         context: context, searchQuery: widget.searchQuery);
     setState(() {});
+  }
+
+  void navigateToImageSearch() {
+    Navigator.pushNamed(context, ImageSearch.routeName);
   }
 
   void navigateToSearchScreen(String query) {
@@ -42,83 +50,60 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
-        child: AppBar(
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: GlobalVariables.appBarGradient,
-            ),
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Container(
-                  height: 42,
-                  margin: const EdgeInsets.only(left: 15),
-                  child: Material(
-                    borderRadius: BorderRadius.circular(7),
-                    elevation: 1,
-                    child: TextFormField(
-                      onFieldSubmitted: navigateToSearchScreen,
-                      decoration: InputDecoration(
-                        prefixIcon: InkWell(
-                          onTap: () {},
-                          child: const Padding(
-                            padding: EdgeInsets.only(
-                              left: 6,
-                            ),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 23,
-                            ),
-                          ),
-                        ),
-                        filled: true,
-                        fillColor: Colors.white,
-                        contentPadding: const EdgeInsets.only(top: 10),
-                        border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide.none,
-                        ),
-                        enabledBorder: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                          borderSide: BorderSide(
-                            color: Colors.black38,
-                            width: 1,
-                          ),
-                        ),
-                        hintText: 'Search Amazon.in',
-                        hintStyle: const TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 17,
-                        ),
-                      ),
-                    ),
+      appBar: widget.imageSearch
+          ? null
+          : PreferredSize(
+              preferredSize: const Size.fromHeight(60),
+              child: AppBar(
+                flexibleSpace: Container(
+                  decoration: const BoxDecoration(
+                    gradient: GlobalVariables.appBarGradient,
                   ),
                 ),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Center(
+                      child: SizedBox(
+                        child: Image.asset('assets/images/white_logo.png'),
+                        height: 50.0,
+                        width: 200.00,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        navigateToImageSearch();
+                      },
+                      child: Container(
+                        color: Colors.transparent,
+                        height: 42,
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        child: const Icon(Icons.image_search_outlined,
+                            color: Colors.white, size: 25),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Container(
-                color: Colors.transparent,
-                height: 42,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: const Icon(Icons.mic, color: Colors.black, size: 25),
-              ),
-            ],
-          ),
-        ),
-      ),
+            ),
       body: products == null
           ? const Loader()
           : Column(
               children: [
-                const AddressBox(),
+                widget.imageSearch
+                    ? Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              "Image Search Results",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      )
+                    : const AddressBox(),
                 const SizedBox(height: 10),
                 Expanded(
                   child: ListView.builder(

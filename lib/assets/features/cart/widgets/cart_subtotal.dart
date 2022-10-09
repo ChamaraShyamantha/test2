@@ -20,13 +20,13 @@ class CartSubtotal extends StatelessWidget {
           const Text(
             'Subtotal ',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 13,
             ),
           ),
           Text(
-            '\$$sum',
+            '\Rs.$sum',
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 13,
               fontWeight: FontWeight.bold,
             ),
           ),

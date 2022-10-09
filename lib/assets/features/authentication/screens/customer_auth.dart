@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medic/assets/features/authentication/screens/login.dart';
 import 'package:medic/assets/features/authentication/services/authentication_service.dart';
 import 'package:medic/assets/global_variables.dart';
 
@@ -15,7 +16,7 @@ class CustomerAuthenticationScreen extends StatefulWidget {
 
 class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
   final _CustomerSignUpFormKey = GlobalKey<FormState>();
-    final _CustomerSignInFormKey = GlobalKey<FormState>();
+  final _CustomerSignInFormKey = GlobalKey<FormState>();
   final AuthenticationService authenticationService = AuthenticationService();
 
   final TextEditingController _nameController = TextEditingController();
@@ -23,6 +24,10 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
   final TextEditingController _contactNoController = TextEditingController();
+
+  void goToSignIn() {
+    Navigator.pushReplacementNamed(context, LoginScreen.routeName);
+  }
 
   @override
   void dispose() {
@@ -40,8 +45,6 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
       name: _nameController.text,
       contactNo: _contactNoController.text,
       address: _addressController.text,
-      
-
     );
   }
 
@@ -53,7 +56,6 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
     );
   }
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +92,6 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
                 key: _CustomerSignUpFormKey,
                 child: Column(
                   children: [
-                    
                     Container(
                       padding: const EdgeInsets.all(10),
                       child: SizedBox(
@@ -107,7 +108,7 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
                             ),
                           ),
                         ),
-                      ), 
+                      ),
                     ),
                     const SizedBox(height: 10),
                     Container(
@@ -187,13 +188,36 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CustomButton(
-                      text: 'Sign Up',
-                      onTap: () {
-                        if (_CustomerSignUpFormKey.currentState!.validate()) {
-                          userSignUp();
-                        }
-                      },
+                    Container(
+                      width: 170,
+                      child: CustomButton(
+                        text: 'Sign Up',
+                        onTap: () {
+                          if (_CustomerSignUpFormKey.currentState!.validate()) {
+                            userSignUp();
+                          }
+                        },
+                      ),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: InkWell(
+                            onTap: () {
+                              goToSignIn();
+                            },
+                            child: const Text(
+                              "Already registered? Login",
+                              style: TextStyle(
+                                  color: Colors.teal,
+                                  fontSize: 14),
+                            ),
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
@@ -205,5 +229,5 @@ class _AuthenticationScreenState extends State<CustomerAuthenticationScreen> {
     );
   }
 
- // void signUpUser() {}
+  // void signUpUser() {}
 }

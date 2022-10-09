@@ -18,23 +18,24 @@ import 'package:medic/assets/features/home/screens/category_deals_screen.dart';
 import 'package:medic/assets/features/order_details/screens/order_details.dart';
 import 'package:medic/assets/product_details/screens/product_details_screen.dart';
 import 'package:medic/assets/features/search/screens/search_screen.dart';
+import 'package:medic/assets/search/image_search.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
-    case VenderAuthenticationScreen.routeName:
+    case LoginScreen.routeName:
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => const VenderAuthenticationScreen(),
+        builder: (_) => const LoginScreen(),
       );
     case CustomerAuthenticationScreen.routeName:
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => const CustomerAuthenticationScreen(),
       );
-    case LoginScreen.routeName:
+    case VenderAuthenticationScreen.routeName:
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => const LoginScreen(),
+        builder: (_) => const VenderAuthenticationScreen(),
       );
     case HomeScreen.routeName:
       return MaterialPageRoute(
@@ -71,6 +72,7 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
         settings: routeSettings,
         builder: (_) => SearchScreen(
           searchQuery: searchQuery,
+          imageSearch: false,
         ),
       );
     case ProductDetailScreen.routeName:
@@ -97,6 +99,9 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
           order: order,
         ),
       );
+
+    case ImageSearch.routeName:
+      return MaterialPageRoute( settings:routeSettings, builder:(_) => ImageSearch());
     default:
       return MaterialPageRoute(
         settings: routeSettings,
