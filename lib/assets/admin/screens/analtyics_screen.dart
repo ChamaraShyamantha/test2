@@ -1,8 +1,8 @@
 import 'package:charts_flutter_new/flutter.dart' as charts;
-import 'package:medic/assets/common/widgets/loader.dart';
-import 'package:medic/assets/admin/models/sales.dart';
-import 'package:medic/assets/admin/services/admin_services.dart';
-import 'package:medic/assets/admin/widgets/category_products_chart.dart';
+import 'package:MedicShare/assets/common/widgets/loader.dart';
+import 'package:MedicShare/assets/admin/models/sales.dart';
+import 'package:MedicShare/assets/admin/services/admin_services.dart';
+import 'package:MedicShare/assets/admin/widgets/category_products_chart.dart';
 import 'package:flutter/material.dart';
 
 class AnalyticsScreen extends StatefulWidget {

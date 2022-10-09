@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:medic/assets/utils.dart';
+import 'package:MedicShare/assets/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 

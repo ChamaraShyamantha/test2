@@ -1,8 +1,8 @@
-import 'package:medic/assets/common/widgets/loader.dart';
-import 'package:medic/assets/features/account/widgets/single_product.dart';
-import 'package:medic/assets/admin/services/admin_services.dart';
-import 'package:medic/assets/features/order_details/screens/order_details.dart';
-import 'package:medic/assets/models/order.dart';
+import 'package:MedicShare/assets/common/widgets/loader.dart';
+import 'package:MedicShare/assets/features/account/widgets/single_product.dart';
+import 'package:MedicShare/assets/admin/services/admin_services.dart';
+import 'package:MedicShare/assets/features/order_details/screens/order_details.dart';
+import 'package:MedicShare/assets/models/order.dart';
 import 'package:flutter/material.dart';
 
 import 'package:typed_data/typed_data.dart';

@@ -1,6 +1,6 @@
 import 'package:charts_flutter_new/flutter.dart' as charts;
 //import 'package:flutter_charts/flutter_charts.dart' as charts;
-import 'package:medic/assets/admin/models/sales.dart';
+import 'package:MedicShare/assets/admin/models/sales.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medic/assets/features/authentication/screens/login.dart';
-import 'package:medic/assets/features/authentication/services/authentication_service.dart';
-import 'package:medic/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/authentication/screens/login.dart';
+import 'package:MedicShare/assets/features/authentication/services/authentication_service.dart';
+import 'package:MedicShare/assets/global_variables.dart';
 
 import '../../../common/widgets/customButton.dart';
 

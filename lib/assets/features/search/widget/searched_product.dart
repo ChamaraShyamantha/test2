@@ -1,5 +1,5 @@
-import 'package:medic/assets/common/widgets/stars.dart';
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/common/widgets/stars.dart';
+import 'package:MedicShare/assets/models/product.dart';
 import 'package:flutter/material.dart';
 
 class SearchedProduct extends StatelessWidget {

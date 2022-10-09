@@ -1,5 +1,5 @@
-import 'package:medic/assets/features/account/services/account_services.dart';
-import 'package:medic/assets/features/account/widgets/account_button.dart';
+import 'package:MedicShare/assets/features/account/services/account_services.dart';
+import 'package:MedicShare/assets/features/account/widgets/account_button.dart';
 import 'package:flutter/material.dart';
 
 class TopButtons extends StatelessWidget {

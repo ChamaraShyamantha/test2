@@ -1,7 +1,7 @@
-import 'package:medic/assets/features/cart/services/cart_services.dart';
-import 'package:medic/assets/product_details/services/product_details_services.dart';
-import 'package:medic/assets/models/product.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/features/cart/services/cart_services.dart';
+import 'package:MedicShare/assets/product_details/services/product_details_services.dart';
+import 'package:MedicShare/assets/models/product.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

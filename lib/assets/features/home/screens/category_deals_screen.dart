@@ -1,9 +1,9 @@
-import 'package:medic/assets/common/widgets/loader.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/home/services/home_services.dart';
-import 'package:medic/assets/product_details/screens/product_details_screen.dart';
-import 'package:medic/assets/product_details/services/product_details_services.dart';
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/common/widgets/loader.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/home/services/home_services.dart';
+import 'package:MedicShare/assets/product_details/screens/product_details_screen.dart';
+import 'package:MedicShare/assets/product_details/services/product_details_services.dart';
+import 'package:MedicShare/assets/models/product.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDealsScreen extends StatefulWidget {

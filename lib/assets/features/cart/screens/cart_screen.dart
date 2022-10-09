@@ -1,13 +1,13 @@
-import 'package:medic/assets/common/widgets/customButton.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/address/screens/address_screen.dart';
-import 'package:medic/assets/features/cart/widgets/cart_product.dart';
-import 'package:medic/assets/features/cart/widgets/cart_subtotal.dart';
-import 'package:medic/assets/features/home/widgets/address_box.dart';
-import 'package:medic/assets/features/search/screens/search_screen.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/common/widgets/customButton.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/address/screens/address_screen.dart';
+import 'package:MedicShare/assets/features/cart/widgets/cart_product.dart';
+import 'package:MedicShare/assets/features/cart/widgets/cart_subtotal.dart';
+import 'package:MedicShare/assets/features/home/widgets/address_box.dart';
+import 'package:MedicShare/assets/features/search/screens/search_screen.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:medic/assets/search/image_search.dart';
+import 'package:MedicShare/assets/search/image_search.dart';
 import 'package:provider/provider.dart';
 
 class CartScreen extends StatefulWidget {

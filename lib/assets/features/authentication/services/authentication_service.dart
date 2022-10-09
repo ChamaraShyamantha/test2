@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
-import 'package:medic/assets/features/home/screens/home_screen.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/models/user.dart';
+import 'package:MedicShare/assets/features/home/screens/home_screen.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/models/user.dart';
 import 'package:http/http.dart' as http;
-import 'package:medic/assets/utils.dart';
-import 'package:medic/assets/error_handler.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/utils.dart';
+import 'package:MedicShare/assets/error_handler.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 //import 'package:medic/assets/common/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medic/assets/global_variables.dart';
+import 'package:MedicShare/assets/global_variables.dart';
 
 import '../../../common/widgets/customButton.dart';
 

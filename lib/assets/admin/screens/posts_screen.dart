@@ -1,8 +1,8 @@
-import 'package:medic/assets/common/widgets/loader.dart';
-import 'package:medic/assets/features/account/widgets/single_product.dart';
-import 'package:medic/assets/admin/screens/add_product_screen.dart';
-import 'package:medic/assets/admin/services/admin_services.dart';
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/common/widgets/loader.dart';
+import 'package:MedicShare/assets/features/account/widgets/single_product.dart';
+import 'package:MedicShare/assets/admin/screens/add_product_screen.dart';
+import 'package:MedicShare/assets/admin/services/admin_services.dart';
+import 'package:MedicShare/assets/models/product.dart';
 import 'package:flutter/material.dart';
 
 class PostsScreen extends StatefulWidget {

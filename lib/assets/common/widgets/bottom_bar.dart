@@ -1,9 +1,9 @@
 
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/account/screens/account_screen.dart';
-import 'package:medic/assets/features/cart/screens/cart_screen.dart';
-import 'package:medic/assets/features/home/screens/home_screen.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/account/screens/account_screen.dart';
+import 'package:MedicShare/assets/features/cart/screens/cart_screen.dart';
+import 'package:MedicShare/assets/features/home/screens/home_screen.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

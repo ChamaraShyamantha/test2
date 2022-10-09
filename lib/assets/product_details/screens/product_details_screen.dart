@@ -1,15 +1,15 @@
-import 'package:medic/assets/common/widgets/customButton.dart';
-import 'package:medic/assets/common/widgets/stars.dart';
-import 'package:medic/assets/product_details/services/product_details_services.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/common/widgets/customButton.dart';
+import 'package:MedicShare/assets/common/widgets/stars.dart';
+import 'package:MedicShare/assets/product_details/services/product_details_services.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/search/screens/search_screen.dart';
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/search/screens/search_screen.dart';
+import 'package:MedicShare/assets/models/product.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:medic/assets/search/image_search.dart';
+import 'package:MedicShare/assets/search/image_search.dart';
 import 'package:provider/provider.dart';
 
 class ProductDetailScreen extends StatefulWidget {

@@ -1,5 +1,5 @@
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

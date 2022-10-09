@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/models/product.dart';
 
 class Order {
   final String id;

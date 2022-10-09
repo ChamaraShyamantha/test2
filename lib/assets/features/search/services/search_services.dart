@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:medic/assets/error_handler.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/utils.dart';
-import 'package:medic/assets/models/product.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/error_handler.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/utils.dart';
+import 'package:MedicShare/assets/models/product.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;

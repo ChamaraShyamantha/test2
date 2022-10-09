@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:medic/assets/models/rating.dart';
+import 'package:MedicShare/assets/models/rating.dart';
 
 class Product {
   final String name;

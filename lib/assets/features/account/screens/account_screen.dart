@@ -1,10 +1,10 @@
-import 'package:medic/assets/features/account/services/account_services.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/account/widgets/below_app_bar.dart';
-import 'package:medic/assets/features/account/widgets/orders.dart';
-import 'package:medic/assets/features/account/widgets/top_buttons.dart';
+import 'package:MedicShare/assets/features/account/services/account_services.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/account/widgets/below_app_bar.dart';
+import 'package:MedicShare/assets/features/account/widgets/orders.dart';
+import 'package:MedicShare/assets/features/account/widgets/top_buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:medic/assets/search/image_search.dart';
+import 'package:MedicShare/assets/search/image_search.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);

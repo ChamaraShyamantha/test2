@@ -1,7 +1,7 @@
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/admin/screens/analtyics_screen.dart';
-import 'package:medic/assets/admin/screens/orders_screen.dart';
-import 'package:medic/assets/admin/screens/posts_screen.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/admin/screens/analtyics_screen.dart';
+import 'package:MedicShare/assets/admin/screens/orders_screen.dart';
+import 'package:MedicShare/assets/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 
 class AdminScreen extends StatefulWidget {
@@ -42,22 +42,13 @@ class _AdminScreenState extends State<AdminScreen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                alignment: Alignment.topLeft,
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: 120,
-                  height: 45,
-                  color: Colors.black,
+              Center(
+                child: Container(
+                  child: Image.asset('assets/images/white_logo.png'),
+                  // height: 50.0,
+                  width: 170.00,
                 ),
               ),
-              const Text(
-                'Admin',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
             ],
           ),
         ),

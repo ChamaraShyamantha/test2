@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:medic/assets/common/widgets/customButton.dart';
-import 'package:medic/assets/common/widgets/custom_textfield.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/utils.dart';
-import 'package:medic/assets/admin/services/admin_services.dart';
+import 'package:MedicShare/assets/common/widgets/customButton.dart';
+import 'package:MedicShare/assets/common/widgets/custom_textfield.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/utils.dart';
+import 'package:MedicShare/assets/admin/services/admin_services.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';

@@ -1,11 +1,11 @@
-import 'package:medic/assets/global_variables.dart';
+import 'package:MedicShare/assets/global_variables.dart';
 import 'package:flutter/material.dart';
-import 'package:medic/assets/features/home/widgets/address_box.dart';
+import 'package:MedicShare/assets/features/home/widgets/address_box.dart';
 
-import 'package:medic/assets/features/home/widgets/carousel_image.dart';
-import 'package:medic/assets/features/home/widgets/deal_of_day.dart';
-import 'package:medic/assets/features/home/widgets/top_categories.dart';
-import 'package:medic/assets/features/search/screens/search_screen.dart';
+import 'package:MedicShare/assets/features/home/widgets/carousel_image.dart';
+import 'package:MedicShare/assets/features/home/widgets/deal_of_day.dart';
+import 'package:MedicShare/assets/features/home/widgets/top_categories.dart';
+import 'package:MedicShare/assets/features/search/screens/search_screen.dart';
 
 import '../../../search/image_search.dart';
 

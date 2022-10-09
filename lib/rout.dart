@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:medic/assets/common/widgets/bottom_bar.dart';
-import 'package:medic/assets/features/authentication/screens/login.dart';
-import 'package:medic/assets/features/authentication/screens/vender_auth.dart';
-import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
-import 'package:medic/assets/features/home/screens/home_screen.dart';
+import 'package:MedicShare/assets/common/widgets/bottom_bar.dart';
+import 'package:MedicShare/assets/features/authentication/screens/login.dart';
+import 'package:MedicShare/assets/features/authentication/screens/vender_auth.dart';
+import 'package:MedicShare/assets/features/authentication/screens/customer_auth.dart';
+import 'package:MedicShare/assets/features/home/screens/home_screen.dart';
 //import 'package:medic/assets/admin/screens/admin_screen.dart';
 
-import 'package:medic/assets/models/order.dart';
-import 'package:medic/assets/models/product.dart';
+import 'package:MedicShare/assets/models/order.dart';
+import 'package:MedicShare/assets/models/product.dart';
 
 //import 'package:medic/assets/common/widgets/bottom_bar.dart';
-import 'package:medic/assets/features/address/screens/address_screen.dart';
-import 'package:medic/assets/admin/screens/add_product_screen.dart';
+import 'package:MedicShare/assets/features/address/screens/address_screen.dart';
+import 'package:MedicShare/assets/admin/screens/add_product_screen.dart';
 
-import 'package:medic/assets/features/home/screens/category_deals_screen.dart';
+import 'package:MedicShare/assets/features/home/screens/category_deals_screen.dart';
 
-import 'package:medic/assets/features/order_details/screens/order_details.dart';
-import 'package:medic/assets/product_details/screens/product_details_screen.dart';
-import 'package:medic/assets/features/search/screens/search_screen.dart';
-import 'package:medic/assets/search/image_search.dart';
+import 'package:MedicShare/assets/features/order_details/screens/order_details.dart';
+import 'package:MedicShare/assets/product_details/screens/product_details_screen.dart';
+import 'package:MedicShare/assets/features/search/screens/search_screen.dart';
+import 'package:MedicShare/assets/search/image_search.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {

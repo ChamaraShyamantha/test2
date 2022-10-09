@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/authentication/services/authentication_service.dart';
+import 'package:MedicShare/assets/features/authentication/screens/customer_auth.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/authentication/services/authentication_service.dart';
 import '../../../common/widgets/customButton.dart';
 
 class LoginScreen extends StatefulWidget {

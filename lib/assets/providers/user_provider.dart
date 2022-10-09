@@ -1,4 +1,4 @@
-import 'package:medic/assets/models/user.dart';
+import 'package:MedicShare/assets/models/user.dart';
 import 'package:flutter/material.dart';
 
 class UserProvider extends ChangeNotifier {

@@ -1,5 +1,5 @@
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/home/screens/category_deals_screen.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/home/screens/category_deals_screen.dart';
 import 'package:flutter/material.dart';
 
 class TopCategories extends StatelessWidget {

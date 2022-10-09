@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 // import 'package:medic/assets/features/authentication/screens/vender_auth.dart';
 // import 'package:medic/assets/features/authentication/screens/customer_auth.dart';
-import 'package:medic/assets/features/authentication/screens/login.dart';
-import 'package:medic/assets/features/authentication/services/authentication_service.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/providers/user_provider.dart';
-import 'package:medic/rout.dart';
+import 'package:MedicShare/assets/features/authentication/screens/login.dart';
+import 'package:MedicShare/assets/features/authentication/services/authentication_service.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
+import 'package:MedicShare/rout.dart';
 import 'package:provider/provider.dart';
-import 'package:medic/assets/common/widgets/bottom_bar.dart';
-import 'package:medic/assets/admin/screens/admin_screen.dart';
+import 'package:MedicShare/assets/common/widgets/bottom_bar.dart';
+import 'package:MedicShare/assets/admin/screens/admin_screen.dart';
 
 void main() {
   runApp(MultiProvider(providers: [

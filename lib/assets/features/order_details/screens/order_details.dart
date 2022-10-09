@@ -1,9 +1,9 @@
-import 'package:medic/assets/common/widgets/customButton.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/admin/services/admin_services.dart';
-import 'package:medic/assets/features/search/screens/search_screen.dart';
-import 'package:medic/assets/models/order.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/common/widgets/customButton.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/admin/services/admin_services.dart';
+import 'package:MedicShare/assets/features/search/screens/search_screen.dart';
+import 'package:MedicShare/assets/models/order.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

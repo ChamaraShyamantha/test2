@@ -1,9 +1,9 @@
-import 'package:medic/assets/common/widgets/loader.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/features/account/services/account_services.dart';
-import 'package:medic/assets/features/account/widgets/single_product.dart';
-import 'package:medic/assets/features/order_details/screens/order_details.dart';
-import 'package:medic/assets/models/order.dart';
+import 'package:MedicShare/assets/common/widgets/loader.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/features/account/services/account_services.dart';
+import 'package:MedicShare/assets/features/account/widgets/single_product.dart';
+import 'package:MedicShare/assets/features/order_details/screens/order_details.dart';
+import 'package:MedicShare/assets/models/order.dart';
 import 'package:flutter/material.dart';
 
 class Orders extends StatefulWidget {

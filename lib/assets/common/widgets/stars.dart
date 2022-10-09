@@ -1,4 +1,4 @@
-import 'package:medic/assets//global_variables.dart';
+import 'package:MedicShare/assets//global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 

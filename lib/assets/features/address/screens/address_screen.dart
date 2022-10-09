@@ -1,11 +1,11 @@
-import 'package:medic/assets/utils.dart';
-import 'package:medic/assets/features/address/services/address_services.dart';
+import 'package:MedicShare/assets/utils.dart';
+import 'package:MedicShare/assets/features/address/services/address_services.dart';
 import 'package:flutter/material.dart';
 import 'package:pay/pay.dart';
 import 'package:provider/provider.dart';
-import 'package:medic/assets/common/widgets/custom_textfield.dart';
-import 'package:medic/assets/global_variables.dart';
-import 'package:medic/assets/providers/user_provider.dart';
+import 'package:MedicShare/assets/common/widgets/custom_textfield.dart';
+import 'package:MedicShare/assets/global_variables.dart';
+import 'package:MedicShare/assets/providers/user_provider.dart';
 
 class AddressScreen extends StatefulWidget {
   static const String routeName = '/address';
